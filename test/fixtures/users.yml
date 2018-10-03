@@ -1,0 +1,4 @@
+michael:  #8.22: ユーザーログインのテストで使うfixture
+  name: Michael Example
+  email: michael@example.com
+  password_digest: <%= User.digest('password') %>

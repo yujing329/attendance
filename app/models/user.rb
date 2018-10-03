@@ -7,5 +7,12 @@ class User < ApplicationRecord
                       format: { with: VALID_EMAIL_REGEX },  #6.21: メールフォーマットを正規表現で検証
                     uniqueness: { case_sensitive: false }   #6.27: メールアドレスの大文字小文字を無視した一意性の検証
   has_secure_password  #リスト 6.37
-  validates :password, presence: true, length: { minimum: 6 }  #6.42: セキュアパスワードの完全な実装
+  validates :password, presence: true, length: { minimum: 6 }  #6.42: 
+
+  # 渡された文字列のハッシュ値を返す
+  def User.digest(string)  #8.21: fixture向けのdigestメソッドを追加
+    cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST :
+                                                  BCrypt::Engine.cost
+    BCrypt::Password.create(string, cost: cost)
+  end
 end
