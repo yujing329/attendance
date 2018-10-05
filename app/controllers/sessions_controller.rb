@@ -8,10 +8,10 @@ class SessionsController < ApplicationController
     if user && user.authenticate(params[:session][:password])
       # ユーザーログイン後にユーザー情報のページにリダイレクトする
       log_in user
+      # 9.23: [remember me] チェックボックスの送信結果を処理
+      params[:session][:remember_me] == '1' ? remember(user) : forget(user)
       redirect_to user
     else
-      #8.8: ログイン失敗時の処理を扱う (誤りあり)
-      #flash[:danger] = 'Invalid email/password combination' # 本当は正しくない
       flash.now[:danger] = 'Invalid email/password combination' # 8.11: ログイン失敗時の正しい処理
       # エラーメッセージを作成する
       render 'new'
@@ -19,7 +19,7 @@ class SessionsController < ApplicationController
   end
 
   def destroy
-    log_out  #8.30: セッションを破棄する (ユーザーのログアウト)
+    log_out if logged_in?  #9.16: ログイン中の場合のみログアウト
     redirect_to root_url
   end
 end
