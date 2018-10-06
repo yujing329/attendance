@@ -1,4 +1,30 @@
-michael:  #8.22: ユーザーログインのテストで使うfixture
+#8.22: ユーザーログインのテストで使うfixture
+michael:
   name: Michael Example
   email: michael@example.com
   password_digest: <%= User.digest('password') %>
+  admin: true   #10.60: fixture内の最初のユーザーを管理者にする
+  
+#10.23: fixtureファイルに２人目のユーザーを追加
+archer:
+  name: Sterling Archer
+  email: duchess@example.gov
+  password_digest: <%= User.digest('password') %>
+
+#10.47: fixtureにさらに30人のユーザーを追加
+lana:
+  name: Lana Kane
+  email: hands@example.gov
+  password_digest: <%= User.digest('password') %>
+
+malory:
+  name: Malory Archer
+  email: boss@example.gov
+  password_digest: <%= User.digest('password') %>
+
+<% 30.times do |n| %>
+user_<%= n %>:
+  name:  <%= "User #{n}" %>
+  email: <%= "user-#{n}@example.com" %>
+  password_digest: <%= User.digest('password') %>
+<% end %>

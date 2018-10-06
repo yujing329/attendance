@@ -8,7 +8,8 @@ class User < ApplicationRecord
                       format: { with: VALID_EMAIL_REGEX },  #6.21: メールフォーマットを正規表現で検証
                     uniqueness: { case_sensitive: false }   #6.27: メールアドレスの大文字小文字を無視した一意性の検証
   has_secure_password  #リスト 6.37
-  validates :password, presence: true, length: { minimum: 6 }  #6.42: 
+  #10.13: パスワードが空のままでも更新できるようにする
+  validates :password, presence: true, length: { minimum: 6 }, allow_nil: true 
 
   # 渡された文字列のハッシュ値を返す
   def User.digest(string)  #8.21: fixture向けのdigestメソッドを追加
