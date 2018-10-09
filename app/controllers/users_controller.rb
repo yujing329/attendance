@@ -3,12 +3,13 @@ class UsersController < ApplicationController
   before_action :correct_user,   only: [:edit, :update]
   before_action :admin_user,     only: :destroy
   
-  def index   #10.35: indexアクションにはログインを要求
-    @users = User.paginate(page: params[:page])   #10.46: indexアクションでUsersをページネート
+  def index
+    @users = User.where(activated: true).paginate(page: params[:page])
   end
 
   def show
     @user = User.find(params[:id])
+    redirect_to root_url and return unless @user.activated?
   end
 
   def new
@@ -18,10 +19,9 @@ class UsersController < ApplicationController
   def create   #7.18: ユーザー登録の失敗に対応できるcreateアクション
     @user = User.new(user_params)
     if @user.save
-      # 保存の成功をここで扱う
-      log_in @user        #8.25: ユーザー登録中にログイン
-      flash[:success] = "Welcome to the Sample App!"   #7.29: ユーザー登録ページにフラッシュメッセージを追加
-      redirect_to @user   #7.28: 保存とリダイレクトを行う、userのcreateアクション
+      @user.send_activation_email
+      flash[:info] = "Please check your email to activate your account."
+      redirect_to root_url
     else
       render 'new'
     end
