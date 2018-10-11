@@ -1,6 +1,4 @@
-<%= @user.name %>, <%= @user.email %>  <!--7.4: ユーザー情報を表示するための仮のビュー-->
-
-<% provide(:title, @user.name) %>      <!--7.8: ユーザー表示ビューに名前とGravatarを表示-->
+<% provide(:title, @user.name) %>
 <div class="row">
   <aside class="col-md-4">
     <section class="user_info">
@@ -10,4 +8,13 @@
       </h1>
     </section>
   </aside>
-</div> 
+  <div class="col-md-8">
+    <% if @user.microposts.any? %>
+      <h3>Microposts (<%= @user.microposts.count %>)</h3>
+      <ol class="microposts">
+        <%= render @microposts %>
+      </ol>
+      <%= will_paginate @microposts %>
+    <% end %>
+  </div>
+</div>
