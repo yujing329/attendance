@@ -42,6 +42,21 @@ textarea {
   }
 }
 
+.btn {
+  padding: 14px 24px;
+  border: 0 none;
+  color: white;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  background: green;
+  &:hover {
+    color: white;
+    background: red;
+    text-decoration: none;
+  }
+}
+
 /* typography */
 
 h1, h2, h3, h4, h5, h6 {
@@ -82,24 +97,27 @@ p {
   padding-top: 9px;
   font-weight: bold;
   &:hover {
-    color: green;
+    color: white;
     text-decoration: none;
   }
 }
-ul {
-  li {
-    // float: left;
-    // margin-left: 15px;
-    color: red;
-    &:hover {
-    color: green;
-    text-decoration: none;
+header.nav{
+  ul {
+    li {
+      // float: left;
+      // margin-left: 15px;
+      color: red;
+      &:hover {
+      color: green;
+      text-decoration: none;
+      }
     }
   }
 }
 /* footer */
 
 footer {
+  font-size: 20px;
   margin-top: 45px;
   padding-top: 5px;
   border-top: 1px solid $gray-medium-light;
@@ -107,7 +125,7 @@ footer {
   a {
     color: lime;
     &:hover {
-      color: green;
+      color: #D2691E;
     }
   }
   small {
