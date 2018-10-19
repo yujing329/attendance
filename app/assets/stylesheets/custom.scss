@@ -15,6 +15,8 @@ $gray-medium-light: #eaeaea;
 
 body {
   padding-top: 60px;
+  background-image: image-url("baseball.jpg");
+  background-size: cover; //背景画像領域全体
 }
 
 section {
@@ -27,8 +29,16 @@ textarea {
 
 .center {
   text-align: center;
+  background-color: rgba(255,255,255,0);  //背景の透過
   h1 {
     margin-bottom: 10px;
+    color: white;
+    text-shadow: 0 1px 0 #999, //h-shadow v-shadow blur color
+    0 2px 0 #999,
+    0 3px 0 #999,
+    0 4px 0 #999,
+    0 5px 0 #999,
+    0 6px 0 #000;
   }
 }
 
@@ -72,22 +82,32 @@ p {
   padding-top: 9px;
   font-weight: bold;
   &:hover {
-    color: white;
+    color: green;
     text-decoration: none;
   }
 }
-
+ul {
+  li {
+    // float: left;
+    // margin-left: 15px;
+    color: red;
+    &:hover {
+    color: green;
+    text-decoration: none;
+    }
+  }
+}
 /* footer */
 
 footer {
   margin-top: 45px;
   padding-top: 5px;
   border-top: 1px solid $gray-medium-light;
-  color: $gray-light;
+  color: lime;
   a {
-    color: $gray;
+    color: lime;
     &:hover {
-      color: $gray-darker;
+      color: green;
     }
   }
   small {
