@@ -17,6 +17,7 @@ body {
   padding-top: 60px;
   background-image: image-url("baseball.jpg");
   background-size: cover; //背景画像領域全体
+  background-repeat:no-repeat;  //背景を一回だけ表示する
 }
 
 section {
