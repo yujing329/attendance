@@ -101,19 +101,7 @@ p {
     text-decoration: none;
   }
 }
-header.nav{
-  ul {
-    li {
-      // float: left;
-      // margin-left: 15px;
-      color: red;
-      &:hover {
-      color: green;
-      text-decoration: none;
-      }
-    }
-  }
-}
+
 /* footer */
 
 footer {
@@ -139,6 +127,16 @@ footer {
       margin-left: 15px;
     }
   }
+  
+// サイトについてのcss
+.about_top{
+  h1{
+    color: white;
+  }
+  p{
+    color: white;
+  }
+}
   /* miscellaneous */
   /*7.2: デバッグ表示を整形するための追加と、Sassのミックスイン*/
   .debug_dump {
