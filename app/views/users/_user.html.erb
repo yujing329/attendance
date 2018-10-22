@@ -4,7 +4,7 @@
   <%= link_to user.name, user %>
   <!--10.57: ユーザー削除用リンクの実装 (管理者にのみ表示される)-->
   <% if current_user.admin? && !current_user?(user) %>
-    | <%= link_to "delete", user, method: :delete,
-                                  data: { confirm: "You sure?" } %>
+    | <%= link_to "削除", user, method: :delete,
+                                  data: { confirm: "削除してよろしいですか？" } %>
   <% end %>
 </li>
