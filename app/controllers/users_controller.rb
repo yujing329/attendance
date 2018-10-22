@@ -35,7 +35,7 @@ class UsersController < ApplicationController
   def update  #10.8: ユーザーのupdateアクションの初期実装
     @user = User.find(params[:id])
     if @user.update_attributes(user_params)
-      flash[:success] = "Profile updated"
+      flash[:success] = "プロフィールが更新されました！"
       redirect_to @user
     else
       render 'edit'
@@ -44,7 +44,7 @@ class UsersController < ApplicationController
 
   def destroy   #10.58: 実際に動作するdestroyアクションを追加
     User.find(params[:id]).destroy
-    flash[:success] = "User deleted"
+    flash[:success] = "ユーザが削除されました！"
     redirect_to users_url
   end
 
