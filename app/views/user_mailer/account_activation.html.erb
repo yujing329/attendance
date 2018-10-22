@@ -6,5 +6,5 @@
 下記のリンクをクリックしてアカウントを有効化してください。
 </p>
 
-<%= link_to "メール確認完了", edit_account_activation_url(@user.activation_token,
+<%= link_to "アカウント有効化", edit_account_activation_url(@user.activation_token,
                                                     email: @user.email) %>
