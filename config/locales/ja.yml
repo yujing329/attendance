@@ -1,0 +1,15 @@
+ja:
+  activerecord:
+    models:
+      user: ユーザー
+    attributes:
+      user:
+        id: ID
+        name: 氏名
+        email: メールアドレス
+        password: パスワード
+        password_confirmation: パスワードの確認(再入力)
+        created_at: 登録日時
+        updated_at: 更新日時
+        view my profile: プロフィール参照
+        delete: 削除
