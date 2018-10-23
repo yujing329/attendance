@@ -11,15 +11,31 @@ $gray-medium-light: #eaeaea;
   box-sizing:         border-box;
 }
 
+img {
+max-width : 100% ;
+height : auto ;
+}
+
+@media screen and (max-width: 480px) {
+h2 {
+font-size : 75% ;
+margin : 1em 0 0.8em 0 ; }
+p {
+width : 100% ;
+font-size : 65% ;
+margin : 0 0 1.8em 0 ;
+line-height : 1.7 ; }
+}
+
 /* universal */
 
 body {
   padding-top: 60px;
   background-image: image-url("baseball.jpg");
   background-repeat: no-repeat;
-  background-position: center;
   background-attachment: fixed;
 	background-size: 100% 800px;
+	-webkit-text-size-adjust : 100%!important;
 }
 
 section {
