@@ -17,11 +17,9 @@ body {
   padding-top: 60px;
   background-image: image-url("baseball.jpg");
   background-repeat:no-repeat;  //背景を一回だけ表示する
+  background-position: center;
   background-attachment: fixed;
-	background-size: 100% 40px;
-	-webkit-background-size: 100% 40px;　/* Safari,Google Chrome用 */  
-	-moz-background-size: 100% 40px;　/* Firefox用 */  
-	-o-background-size: 100% 40px;　/* Opera用 */  
+	background-size: 100% 800px;
 }
 
 section {
@@ -73,6 +71,13 @@ h1 {
   letter-spacing: -2px;
   margin-bottom: 30px;
   text-align: center;
+  color: white;
+  text-shadow: 0 1px 0 #999, //h-shadow v-shadow blur color
+  0 2px 0 #999,
+  0 3px 0 #999,
+  0 4px 0 #999,
+  0 5px 0 #999,
+  0 6px 0 #000;
 }
 
 h2 {
@@ -81,12 +86,13 @@ h2 {
   margin-bottom: 30px;
   text-align: center;
   font-weight: normal;
-  color: $gray-light;
+  color: white;
 }
 
 p {
   font-size: 1.1em;
   line-height: 1.7em;
+  color: white;
 }
 
 
@@ -132,16 +138,7 @@ footer {
       margin-left: 15px;
     }
   }
-  
-// サイトについてのcss
-.about_top{
-  h1{
-    color: white;
-  }
-  p{
-    color: white;
-  }
-}
+
   /* miscellaneous */
   /*7.2: デバッグ表示を整形するための追加と、Sassのミックスイン*/
   .debug_dump {
@@ -235,6 +232,7 @@ input, textarea, select, .uneditable-input {
   width: 100%;
   margin-bottom: 15px;
   @include box_sizing;
+  color: white;
 }
 
 input {
@@ -306,7 +304,7 @@ input {
     }
   }
   .timestamp {
-    color: $gray-light;
+    color: white;
     display: block;
     margin-left: 60px;
   }
