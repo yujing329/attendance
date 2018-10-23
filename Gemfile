@@ -39,7 +39,7 @@ end
 
 group :production do
   gem 'pg', '0.20.0'
-  gem 'fog', '1.42' #13.58: GemfileにCarrierWaveを追加
+  gem 'fog-aws'
 end
 
 # Windows環境ではtzinfo-dataというgemを含める必要があります
