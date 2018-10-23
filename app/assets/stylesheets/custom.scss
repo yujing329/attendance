@@ -16,25 +16,12 @@ $gray-medium-light: #eaeaea;
 body {
   padding-top: 60px;
   background-image: image-url("baseball.jpg");
-  background-size: cover; //背景画像領域全体
   background-repeat:no-repeat;  //背景を一回だけ表示する
-  background-position: center;
-
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  -webkit-align-items: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  background-attachment: fixed;
+	background-size: 100% 40px;
+	-webkit-background-size: 100% 40px;　/* Safari,Google Chrome用 */  
+	-moz-background-size: 100% 40px;　/* Firefox用 */  
+	-o-background-size: 100% 40px;　/* Opera用 */  
 }
 
 section {
