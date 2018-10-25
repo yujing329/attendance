@@ -77,6 +77,10 @@ textarea {
   }
 }
 
+.row{
+  color: white;
+}
+
 .btn {
   padding: 14px 24px;
   border: 0 none;
@@ -121,6 +125,9 @@ h2 {
   color: white;
 }
 
+h3 {
+  color: white;
+}
 p {
   font-size: 1.1em;
   line-height: 1.7em;
@@ -199,6 +206,7 @@ aside {
       display: block;
       margin-bottom: 3px;
       line-height: 1;
+      color: white;
     }
     h1 {
       font-size: 1.4em;
@@ -226,8 +234,8 @@ aside {
   a {
     float: left;
     padding: 0 10px;
-    border-left: 1px solid $gray-lighter;
-    color: gray;
+    border-left: 1px white;
+    color: white;
     &:first-child {
       padding-left: 0;
       border: 0;
