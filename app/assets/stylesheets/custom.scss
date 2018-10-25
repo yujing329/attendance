@@ -32,10 +32,26 @@ line-height : 1.7 ; }
 body {
   padding-top: 60px;
   background-image: image-url("baseball.jpg");
+  /* 画像を常に天地左右の中央に配置 */
+  background-position: center center;
+   
+  /* 画像をタイル状に繰り返し表示しない */
   background-repeat: no-repeat;
+   
+  /* コンテンツの高さが画像の高さより大きい時、動かないように固定 */
   background-attachment: fixed;
-	background-size: 100% 800px;
-	-webkit-text-size-adjust : 100%!important;
+   
+  /* 表示するコンテナの大きさに基づいて、背景画像を調整 */
+  background-size: cover;
+   
+  /* 背景画像が読み込まれる前に表示される背景のカラー */
+  background-color: #464646;
+}
+
+@media only screen and (max-width: 767px) {
+  body {
+    background-image: image-url("baseball.jpg");
+  }
 }
 
 section {
