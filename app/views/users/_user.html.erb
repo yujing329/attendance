@@ -5,6 +5,6 @@
   <!--10.57: ユーザー削除用リンクの実装 (管理者にのみ表示される)-->
   <% if current_user.admin? && !current_user?(user) %>
     | <%= link_to "削除", user, method: :delete,
-                                  data: { confirm: "削除してよろしいですか？" } %>
+                                  data: { confirm: "削除してよろしいですか？" } , :style=>"color:yellow;" %>
   <% end %>
 </li>

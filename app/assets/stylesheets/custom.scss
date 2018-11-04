@@ -80,7 +80,7 @@ textarea {
   }
 }
 
-.row{
+.row,.col-md-8{
   color: white;
   background-color: rgba(0,0,0,0.5);  //背景の透過
   margin: 0px 100px 100px 100px;
@@ -158,9 +158,7 @@ p {
     text-decoration: none;
   }
 }
-nav {
-  color: white;
-}
+
 /* footer */
 
 footer {
@@ -251,7 +249,7 @@ aside {
     }
     &:hover {
       text-decoration: none;
-      color: blue;
+      color: yellow;
     }
   }
   strong {
