@@ -5,7 +5,7 @@
       <%= gravatar_for @user %>
       <h1><%= @user.name %></h1>
       <span><%= link_to "プロフィール参照", @user , :style=>"color:yellow;" %></span>
-      <span><b>ユーザ投稿一覧:</b> <%= @user.microposts.count %></span>
+      <span><b>投稿数:</b> <%= @user.microposts.count %></span>
     </section>
     <section class="stats">
       <%= render 'shared/stats' %>
