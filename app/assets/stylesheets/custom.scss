@@ -60,6 +60,7 @@ section {
 
 textarea {
   resize: vertical;
+  color: black;
 }
 
 .center {
@@ -161,6 +162,7 @@ p {
 
 #home,#userlist,#login,.dropdown-toggle {
   color: white;
+  font-weight: bold;
   &:hover {
     color: red;
     text-decoration: none;

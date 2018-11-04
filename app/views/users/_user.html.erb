@@ -1,7 +1,7 @@
 <!--10.51: 各ユーザーを表示するパーシャル-->
 <li>
   <%= gravatar_for user, size: 50 %>
-  <%= link_to user.name, user , :style=>"color:yellow;" %>
+  <%= link_to user.name, user, :style=>"color:yellow;" %>
   <!--10.57: ユーザー削除用リンクの実装 (管理者にのみ表示される)-->
   <% if current_user.admin? && !current_user?(user) %>
     | <%= link_to "削除", user, :style=>"color:yellow;", method: :delete,
