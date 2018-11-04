@@ -17,7 +17,7 @@ class SessionsController < ApplicationController
         redirect_to root_url
       end
     else
-      flash.now[:danger] = '無効なメール/パスワードの組み合わせです' # 8.11: ログイン失敗時の正しい処理
+      flash.now[:danger] = 'メールとパスワードの組み合わせが一致しません' # 8.11: ログイン失敗時の正しい処理
       # エラーメッセージを作成する
       render 'new'
     end
