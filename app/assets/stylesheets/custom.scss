@@ -160,14 +160,18 @@ p {
   }
 }
 
-#home,#userlist,#login,.dropdown-toggle {
+#home,#userlist,#login,.dropdown {
   color: white;
   font-weight: bold;
   &:hover {
     color: red;
     text-decoration: none;
   }
+  .dropdown-toggle {
+    background-color: #8B4513;
+  }
 }
+
 
 /* footer */
 
