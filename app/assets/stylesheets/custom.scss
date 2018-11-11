@@ -169,7 +169,19 @@ p {
   }
 }
 
-.dropdown,.dropdown-toggle,.dropdown-menu,.caret,.doropdown a{
+.dropdown,.dropdown-toggle,.dropdown-menu,.caret {
+  background-color: #8B4513;
+  color: white;
+  font-weight: bold;
+  &:hover {
+    background-color: #8B4513;
+    color: red;
+    font-weight: bold;
+    text-decoration: none;
+  }
+}
+
+.dropdown li a{
   background-color: #8B4513;
   color: white;
   font-weight: bold;
