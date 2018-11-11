@@ -168,13 +168,14 @@ p {
   }
 }
 
-.dropdown-menu {
+.dropdown,.dropdown-toggle,.dropdown-menu,.caret {
   background-color: #8B4513;
-  li {
-    color: white;
-  }
+  color: white;
+  font-weight: bold;
   &:hover {
+    background-color: #8B4513;
     color: red;
+    font-weight: bold;
     text-decoration: none;
   }
 }
