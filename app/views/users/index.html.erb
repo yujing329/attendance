@@ -2,9 +2,10 @@
 <h1>ユーザリスト</h1>
 
 <div class="row">
+  <h3>現在の登録者数は<%= @users.count %>人です</h3>
+
   <%= will_paginate %>
   
-  <h3>現在の登録者数は<%= @users.count %>人です</h3>
   <ul class="users">
     <%= render @users %>
   </ul>
