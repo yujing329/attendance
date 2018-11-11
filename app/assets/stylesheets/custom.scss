@@ -163,12 +163,13 @@ p {
   color: white;
   font-weight: bold;
   &:hover {
+    background-color: #8B4513;
     color: red;
     text-decoration: none;
   }
 }
 
-.dropdown,.dropdown-toggle,.dropdown-menu,.caret {
+.dropdown,.dropdown-toggle,.dropdown-menu,.caret,.doropdown a{
   background-color: #8B4513;
   color: white;
   font-weight: bold;
