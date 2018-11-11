@@ -168,9 +168,11 @@ p {
   }
 }
 
-.dropdown,.dropdown-menu {
-  color: white;
+.dropdown-menu {
   background-color: #8B4513;
+  li {
+    color: white;
+  }
   &:hover {
     color: red;
     text-decoration: none;
