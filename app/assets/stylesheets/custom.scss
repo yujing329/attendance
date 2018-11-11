@@ -159,18 +159,23 @@ p {
   }
 }
 
-#home,#userlist,#login,.dropdown {
+#home,#userlist,#login {
   color: white;
   font-weight: bold;
   &:hover {
     color: red;
     text-decoration: none;
   }
-  .dropdown-toggle {
-    background-color: #8B4513;
-  }
 }
 
+.dropdown,.dropdown-menu {
+  color: white;
+  background-color: #8B4513;
+  &:hover {
+    color: red;
+    text-decoration: none;
+  }
+}
 
 /* footer */
 
