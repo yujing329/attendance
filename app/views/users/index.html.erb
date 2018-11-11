@@ -4,7 +4,7 @@
 <div class="row">
   <%= will_paginate %>
   
-  <%= @users.count %>
+  <h3>現在の登録者数は<%= @users.count %>人です</h3>
   <ul class="users">
     <%= render @users %>
   </ul>
