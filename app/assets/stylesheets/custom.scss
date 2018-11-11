@@ -174,7 +174,7 @@ p {
   background-color: #8B4513;
   color: white;
   font-weight: bold;
-  &:hover {
+  &:focus,&:hover {
     background-color: #8B4513;
     color: red;
     font-weight: bold;
