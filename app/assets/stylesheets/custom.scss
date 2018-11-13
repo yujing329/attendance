@@ -441,5 +441,9 @@ span.picture {
 /*ユーザリスト*/
 .reusers {
   color:yellow;
-  text-align: right;
+  float: left;
+  &:hover {
+    color: red;
+    text-decoration: none;
+  }
 }
