@@ -311,7 +311,7 @@ input, textarea, select, .uneditable-input {
   width: 100%;
   margin-bottom: 15px;
   @include box_sizing;
-  color: white;
+  color: black;
 }
 
 input {
@@ -406,10 +406,6 @@ span.picture {
   input {
     border: 0;
   }
-}
-
-.field {
-  color: black;
 }
 
 .rentext {
