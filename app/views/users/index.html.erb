@@ -2,7 +2,7 @@
 <h1>ユーザリスト</h1>
 
 <div class="row">
-  <h3>現在の登録者数は<%= @users.count %>人です</h3>
+  <h3>人数は<%= @users.count %>人です</h3>
 
     <%= will_paginate %>
     
@@ -10,7 +10,7 @@
   <div class="search">
     <p>ユーザ検索</p>
     <%= form_tag(users_path, :method => 'get' ) do %>
-      <%= text_field_tag :search %>
+      <%= text_field_tag :search, :style=>"color: black;" %>
       <%= submit_tag '検索', :name => nil, class: "shbtn" %>
     <% end %>
   </div>
