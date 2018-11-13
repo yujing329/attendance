@@ -160,7 +160,7 @@ p {
   }
 }
 
-#home,#userlist,#login,#profile,#edit,#logout {
+#home,#userlist,#login,#profile,#edit,#logout,#acount {
   color: white;
   font-weight: bold;
   &:hover {
@@ -174,19 +174,7 @@ p {
   background-color: #8B4513;
   color: white;
   font-weight: bold;
-  &:focus,&:hover {
-    background-color: #8B4513;
-    color: red;
-    font-weight: bold;
-    text-decoration: none;
-  }
-}
-
-.dropdown a{
-  background-color: #8B4513;
-  color: white;
-  font-weight: bold;
-  &:hover {
+  &:active,&:hover {
     background-color: #8B4513;
     color: red;
     font-weight: bold;
