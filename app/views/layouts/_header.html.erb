@@ -4,7 +4,7 @@
     <nav>
       <ul class="nav navbar-nav navbar-right">
         <li><%= link_to "ホーム", root_path, id: "home" %></li>
-        <!--<li> link_to "連盟一覧", help_path </li>-->
+        <li><%= link_to "連盟一覧", help_path, id: "renmei" %></li>
         <% if logged_in? %>  <!--8.19: ログイン中のユーザー用のレイアウトのリンクを変更する-->
           <li><%= link_to "ユーザリスト", users_path, id: "userlist" %></li>   <!--10.40: ユーザー一覧ページへのリンクを更新-->
           <li class="dropdown">

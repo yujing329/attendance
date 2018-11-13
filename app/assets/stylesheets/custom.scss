@@ -14,6 +14,7 @@ $gray-medium-light: #eaeaea;
 img {
 max-width : 100% ;
 height : auto ;
+border: none;
 }
 
 /* universal */
@@ -160,7 +161,7 @@ p {
   }
 }
 
-#home,#userlist,#login,#profile,#edit,#logout,#acount,
+#home,#userlist,#login,#profile,#edit,#logout,#acount,#renmei,
 .dropdown,.open,.dropdown-toggle,.dropdown-menu,.caret {
   background-color: #8B4513;
   color: white;
@@ -408,4 +409,10 @@ span.picture {
 
 .field {
   color: black;
+}
+
+.rentext {
+  a{
+  color: yellow;
+  }
 }
