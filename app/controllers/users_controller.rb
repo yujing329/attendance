@@ -3,9 +3,9 @@ class UsersController < ApplicationController
                                         :following, :followers]
   before_action :correct_user,   only: [:edit, :update]
   before_action :admin_user,     only: :destroy
-  
+
   def index
-    @users = User.where(activated: true).paginate(page: params[:page])
+    @users = User.where(activated: true).paginate(page: params[:page]).search(params[:search])
   end
 
   def show
@@ -80,9 +80,5 @@ class UsersController < ApplicationController
   # 管理者かどうかを確認
   def admin_user
     redirect_to(root_url) unless current_user.admin?
-  end
-
-  def index
-    @users = User.where(activated: true).paginate(page: params[:page]).search(params[:search])
   end
 end
