@@ -417,3 +417,18 @@ span.picture {
   color: yellow;
   }
 }
+
+.search {
+  padding: 14px 24px;
+  border: 0 none;
+  color: white;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  background: green;
+  &:hover {
+    color: white;
+    background: red;
+    text-decoration: none;
+  }
+}
