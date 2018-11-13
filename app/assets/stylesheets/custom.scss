@@ -161,11 +161,12 @@ p {
 }
 
 #home,#userlist,#login,#profile,#edit,#logout,#acount,
-.dropdown,.dropdown-toggle,.dropdown-menu,.caret {
+.dropdown,.dropdown-toggle,.dropdown-menu,.caret,
+.nav > li > a:hover, .nav > li > a:focus {
   background-color: #8B4513;
   color: white;
   font-weight: bold;
-  &:focus,&:hover {
+  &:hover {
     background-color: #8B4513;
     color: red;
     font-weight: bold;
