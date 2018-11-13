@@ -160,16 +160,7 @@ p {
   }
 }
 
-#home,#userlist,#login,#profile,#edit,#logout,#acount {
-  color: white;
-  font-weight: bold;
-  &:hover {
-    background-color: #8B4513;
-    color: red;
-    text-decoration: none;
-  }
-}
-
+#home,#userlist,#login,#profile,#edit,#logout,#acount,
 .dropdown,.dropdown-toggle,.dropdown-menu,.caret {
   background-color: #8B4513;
   color: white;
