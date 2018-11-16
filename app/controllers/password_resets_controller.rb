@@ -11,10 +11,10 @@ class PasswordResetsController < ApplicationController
     if @user
       @user.create_reset_digest
       @user.send_password_reset_email
-      flash[:info] = "パスワード再設定の確認メールが送信されました"
+      flash[:info] = "パスワード再設定の確認メールが送信されました。"
       redirect_to root_url
     else
-      flash.now[:danger] = "メールアドレスが見つかりません"
+      flash.now[:danger] = "メールアドレスが見つかりません。"
       render 'new'
     end
   end
@@ -57,7 +57,7 @@ class PasswordResetsController < ApplicationController
     # トークンが期限切れかどうか確認する
     def check_expiration
       if @user.password_reset_expired?
-        flash[:danger] = "期限切れの為、パスワードのリセットが終了しました"
+        flash[:danger] = "期限切れの為、パスワードのリセットが終了しました。"
         redirect_to new_password_reset_url
       end
     end
